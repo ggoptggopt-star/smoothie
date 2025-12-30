@@ -1,0 +1,653 @@
+/* mobile.css - CSS สำหรับมือถือ */
+
+/* ============================================
+   Reset และ Base Styles
+============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Header และ Navigation
+============================================ */
+header {
+    padding: 15px !important;
+    flex-direction: column;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 1.5em !important;
+    text-align: center;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.btn-group a {
+    margin: 0 !important;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar {
+    padding: 10px 15px !important;
+}
+
+.navbar h1 {
+    font-size: 1.2em !important;
+}
+
+.navbar-menu {
+    flex-direction: column;
+    gap: 8px !important;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.navbar-menu a {
+    text-align: center;
+    width: 100%;
+}
+
+/* ============================================
+   Container และ Padding
+============================================ */
+.container {
+    padding: 15px !important;
+}
+
+/* ============================================
+   Grid Layouts
+============================================ */
+.smoothie-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+}
+
+.stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+}
+
+.stat-card {
+    padding: 15px !important;
+}
+
+.stat-value {
+    font-size: 1.5em !important;
+}
+
+.stat-label {
+    font-size: 0.85em;
+}
+
+/* ============================================
+   Cards
+============================================ */
+.smoothie-card,
+.order-card,
+.success-card {
+    margin-bottom: 15px;
+}
+
+.smoothie-info,
+.order-form {
+    padding: 15px !important;
+}
+
+.smoothie-name {
+    font-size: 1.1em !important;
+}
+
+.smoothie-price {
+    font-size: 1.3em !important;
+}
+
+.smoothie-description {
+    font-size: 0.85em !important;
+}
+
+/* ============================================
+   Buttons
+============================================ */
+.btn,
+.btn-primary,
+.btn-secondary {
+    width: 100%;
+    padding: 12px 20px !important;
+    font-size: 16px !important;
+    margin: 5px 0 !important;
+}
+
+.btn-group {
+    flex-direction: column;
+}
+
+.btn-group a,
+.btn-group button {
+    width: 100%;
+}
+
+/* ============================================
+   Forms
+============================================ */
+.form-group {
+    margin-bottom: 15px !important;
+}
+
+.form-group label {
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-size: 16px !important;
+    padding: 12px !important;
+}
+
+.sweetness-options {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+}
+
+.sweetness-option label {
+    padding: 12px !important;
+}
+
+.payment-options {
+    gap: 8px !important;
+}
+
+.payment-option label {
+    padding: 12px !important;
+    font-size: 14px;
+}
+
+/* ============================================
+   Tables
+============================================ */
+.orders-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.orders-table thead {
+    display: none;
+}
+
+.orders-table tbody {
+    display: block;
+}
+
+.orders-table tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    background: white;
+}
+
+.orders-table td {
+    display: block;
+    padding: 8px 0 !important;
+    border: none !important;
+    text-align: left !important;
+}
+
+.orders-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+    color: #666;
+}
+
+.orders-table td:first-child {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #667eea;
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    margin-bottom: 10px;
+}
+
+.action-btns {
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.btn-sm {
+    flex: 1 1 45%;
+    min-width: 80px;
+}
+
+/* ============================================
+   Section Headers
+============================================ */
+.section-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 15px;
+}
+
+.section-header h2 {
+    font-size: 1.3em;
+}
+
+.header-actions {
+    width: 100%;
+    flex-direction: column;
+}
+
+.header-actions > * {
+    width: 100% !important;
+}
+
+.refresh-select,
+.refresh-btn,
+.delete-all-btn {
+    width: 100% !important;
+    margin: 5px 0 !important;
+}
+
+.refresh-status {
+    justify-content: center;
+    padding: 8px;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+/* ============================================
+   Modals
+============================================ */
+.modal {
+    padding: 10px !important;
+}
+
+.modal-content,
+.confirm-content {
+    width: 95% !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    margin: 10px !important;
+}
+
+.modal-header {
+    flex-direction: row;
+    margin-bottom: 15px !important;
+}
+
+.modal-header h2 {
+    font-size: 1.3em;
+}
+
+.close-modal {
+    font-size: 30px;
+}
+
+.confirm-icon {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 30px !important;
+}
+
+.confirm-content h3 {
+    font-size: 1.2em !important;
+}
+
+.confirm-buttons {
+    flex-direction: column;
+    width: 100%;
+}
+
+.btn-confirm {
+    width: 100% !important;
+}
+
+/* ============================================
+   Detail Rows
+============================================ */
+.detail-row {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 5px;
+    padding: 12px 0 !important;
+}
+
+.detail-label {
+    font-size: 0.85em;
+    color: #999 !important;
+}
+
+.detail-value {
+    font-size: 1em;
+    width: 100%;
+}
+
+.order-details {
+    padding: 15px !important;
+}
+
+/* ============================================
+   Order Success Page
+============================================ */
+.success-card {
+    padding: 25px !important;
+}
+
+.success-icon {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 30px !important;
+}
+
+.order-number {
+    font-size: 1em !important;
+}
+
+.notification-toast {
+    right: 10px !important;
+    left: 10px !important;
+    top: 10px !important;
+    padding: 15px !important;
+}
+
+/* ============================================
+   QR Code Section
+============================================ */
+#qr-code {
+    padding: 15px !important;
+}
+
+#qr-code img {
+    max-width: 180px !important;
+}
+
+#slip-upload {
+    margin-top: 10px !important;
+}
+
+/* ============================================
+   Image Previews
+============================================ */
+.current-image,
+.image-preview,
+.slip-image {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* ============================================
+   Status Badges
+============================================ */
+.status-badge {
+    font-size: 0.75em !important;
+    padding: 4px 10px !important;
+}
+
+/* ============================================
+   Empty States
+============================================ */
+.empty-state {
+    padding: 30px 15px !important;
+}
+
+.empty-state h2,
+.empty-state h3 {
+    font-size: 1.2em;
+}
+
+/* ============================================
+   Orders Public Page
+============================================ */
+.orders-grid {
+    gap: 15px !important;
+}
+
+.order-card {
+    grid-template-columns: 1fr !important;
+    padding: 15px !important;
+    gap: 10px;
+}
+
+.order-number {
+    font-size: 1.3em !important;
+    margin-bottom: 10px;
+}
+
+.order-info {
+    gap: 8px !important;
+}
+
+.order-title {
+    font-size: 1.1em !important;
+}
+
+.order-detail {
+    font-size: 0.85em !important;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Admin Pages - Smoothies
+============================================ */
+.smoothies-grid {
+    grid-template-columns: 1fr !important;
+}
+
+.smoothie-image {
+    height: 180px !important;
+}
+
+/* ============================================
+   Login Page
+============================================ */
+.login-card {
+    padding: 25px !important;
+}
+
+/* ============================================
+   Alert Messages
+============================================ */
+.alert,
+.alert-success,
+.alert-error {
+    padding: 12px 15px !important;
+    font-size: 0.9em;
+}
+
+/* ============================================
+   Utility Classes
+============================================ */
+.text-center {
+    text-align: center;
+}
+
+.mb-1 { margin-bottom: 0.5rem !important; }
+.mb-2 { margin-bottom: 1rem !important; }
+.mb-3 { margin-bottom: 1.5rem !important; }
+
+.mt-1 { margin-top: 0.5rem !important; }
+.mt-2 { margin-top: 1rem !important; }
+.mt-3 { margin-top: 1.5rem !important; }
+
+.p-1 { padding: 0.5rem !important; }
+.p-2 { padding: 1rem !important; }
+.p-3 { padding: 1.5rem !important; }
+
+/* ============================================
+   Touch-Friendly
+============================================ */
+button,
+a,
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Increase clickable area */
+.btn-sm {
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+}
+
+/* ============================================
+   Scrollbar
+============================================ */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ============================================
+   Loading States
+============================================ */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* ============================================
+   Landscape Mode
+============================================ */
+@media (orientation: landscape) and (max-height: 500px) {
+    .navbar {
+        padding: 8px 15px !important;
+    }
+    
+    .navbar h1 {
+        font-size: 1em !important;
+    }
+    
+    .container {
+        padding: 10px !important;
+    }
+    
+    .modal-content {
+        max-height: 85vh !important;
+    }
+}
+
+/* ============================================
+   Small Phones (< 375px)
+============================================ */
+@media (max-width: 374px) {
+    body {
+        font-size: 14px;
+    }
+    
+    header h1,
+    .navbar h1 {
+        font-size: 1.1em !important;
+    }
+    
+    .stat-value {
+        font-size: 1.3em !important;
+    }
+    
+    .btn {
+        padding: 10px 15px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* ============================================
+   Large Phones and Small Tablets (768px+)
+============================================ */
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    .smoothie-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .smoothies-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .btn-group {
+        flex-direction: row;
+    }
+    
+    .btn-group a,
+    .btn-group button {
+        width: auto;
+    }
+}
+
+/* ============================================
+   Print Styles
+============================================ */
+@media print {
+    .navbar,
+    .btn,
+    .btn-group,
+    .header-actions,
+    .action-btns {
+        display: none !important;
+    }
+    
+    .container {
+        padding: 0 !important;
+    }
+    
+    .orders-table tr {
+        page-break-inside: avoid;
+    }
+}
